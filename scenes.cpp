@@ -120,6 +120,7 @@ Ship *Scene1::get_ship()
         if(e->get_type() == ObjectType::ship)
             return (Ship *)e;
     }
+    return NULL;
 }
 
 void Scene1::event(EventType e)
