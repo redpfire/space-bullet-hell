@@ -25,7 +25,7 @@ void splash_screen(WINDOW *w)
 
     for(;;)
     {
-        if(a >= 5000)
+        if(a >= 20)
         {
             v = !v;
             a = 0;
@@ -42,7 +42,7 @@ void splash_screen(WINDOW *w)
 
         a++;
         refresh();
-        sleep(0.1);
+        usleep(20000);
     }
 }
 

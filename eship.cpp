@@ -17,7 +17,7 @@ void EnemyShip::draw()
 
 void EnemyShip::advance()
 {
-    if((b++) >= 6000-(get_curr_scene()->get_stage()-1*600))
+    if((b++) >= 30-(get_curr_scene()->get_stage()-1*5))
     {
         int r = rand() % 100;
         if((y++) >= 39)
@@ -52,7 +52,7 @@ GameObject *EnemyShip::colided()
 
 void EnemyShip::shoot()
 {
-    if((a++) >= 20000-(get_curr_scene()->get_stage()-1*900))
+    if((a++) >= 60-(get_curr_scene()->get_stage()-1*12))
     {
         Scene *s = get_curr_scene();
         if(s->get_stage() == 1)

@@ -36,7 +36,10 @@ GameObject *Bullet::colided()
 
 bool Bullet::advance()
 {
-    if(c++ >= 1900)
+    if(c++ >= ((from()==ObjectType::enemy)
+                ? 18-(get_curr_scene()->get_stage()-1)
+                :4
+                ))
     {
         y -= vely;
         x += velx;

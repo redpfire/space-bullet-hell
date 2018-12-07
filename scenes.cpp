@@ -86,9 +86,9 @@ void Scene1::update()
             }
     }
     
-    if((a++) >= 5000)
+    if((a++) >= 60)
     {
-        if((rand() % 100) >= 80)
+        if((rand() % 100) >= 60)
             insert_object(new EnemyShip((rand() % 59 + 1), 1));
         a = 0;
     }
