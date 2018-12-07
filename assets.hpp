@@ -81,7 +81,6 @@ class Scene
     public:
         virtual Ship *get_ship() = 0;
         virtual void draw(WINDOW *) = 0;
-        virtual void event(EventType) = 0;
         void move_ship(int, int);
         void insert_object(GameObject *);
         virtual std::vector<GameObject*> *get_go() = 0;
@@ -99,7 +98,6 @@ class Scene1 : public Scene
         std::vector<GameObject*> *go;
         Ship *get_ship();
         void draw(WINDOW *);
-        void event(EventType);
         void update();
         int get_stage();
         std::vector<GameObject*> *get_go();

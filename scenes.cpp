@@ -123,13 +123,3 @@ Ship *Scene1::get_ship()
     return NULL;
 }
 
-void Scene1::event(EventType e)
-{
-    switch(e)
-    {
-        case EventType::keyboard:
-            
-        break;
-    }
-}
-
