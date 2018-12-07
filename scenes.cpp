@@ -109,7 +109,7 @@ int Scene1::get_stage()
 void Scene::insert_object(GameObject *o)
 {
     vector<GameObject*> *go = get_go();
-    if(go->size() <= 149)
+    if(go->size() <= 300)
         go->push_back(o);
 }
 

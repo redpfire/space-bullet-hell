@@ -138,17 +138,17 @@ void main_loop(WINDOW *w)
             if(go)
                 break;
 
+            mvprintw(35,47,"STAGE %d", curr_scene->get_stage());
+            mvprintw(34,46, "SCORE: %d", score);
+
             curr_scene->draw(w);
 
-            mvprintw(34,46, "SCORE: %d", score);
             mvprintw(2,39, "%s", (cheats[Cheat::noclip]) ? "NOCLIP" : "");
             mvprintw(1,39, "%s", (cheats[Cheat::god]) ? "GOD MODE": "");
 
             if(debug_info)
                 if(curr_scene->get_go())
                     mvprintw(0,0,"ENTITIES: %d", curr_scene->get_go()->size());
-
-            mvprintw(35,47,"STAGE %d", curr_scene->get_stage());
 
             char ch = getch();
             if(ch == 'q')
