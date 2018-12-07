@@ -88,7 +88,7 @@ void game_over_scene()
         {
             case '\n':
                 endwin();
-                sound_cleanup();
+                //sound_cleanup();
                 exit(0);
             break;
             case 'r':
